@@ -199,13 +199,22 @@ h1 {
 
 .item-card {
   display: grid;
-  grid-template-columns: 48px 1fr auto;
+  grid-template-columns: 48px minmax(0, 1fr) 2rem;
   gap: 12px;
   align-items: center;
   background: var(--surface);
   border: 1px solid var(--line);
   border-radius: 18px;
   padding: 12px;
+}
+
+.item-body {
+  min-width: 0;
+}
+
+.item-body h3,
+.item-body p {
+  overflow-wrap: anywhere;
 }
 
 .item-thumb {
