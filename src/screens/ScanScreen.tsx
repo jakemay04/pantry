@@ -129,16 +129,25 @@ export function ScanScreen() {
             <span>Barcode</span>
             <input
               inputMode="numeric"
+              autoComplete="off"
               autoFocus
               value={typedBarcode}
-              placeholder="3017620422003"
+              placeholder="Type the numbers under the barcode"
               onChange={(event) => setTypedBarcode(event.target.value)}
             />
           </label>
-          <p className="muted">
-            Try 3017620422003 (Nutella) if you want a known Open Food Facts hit.
-          </p>
-          <button type="submit" className="primary-btn" disabled={!typedBarcode.trim()}>
+          <button
+            type="button"
+            className="chip example-chip"
+            onClick={() => setTypedBarcode('3017620422003')}
+          >
+            Try Nutella · 3017620422003
+          </button>
+          <button
+            type="submit"
+            className="primary-btn"
+            disabled={!typedBarcode.trim()}
+          >
             Look up
           </button>
         </form>
