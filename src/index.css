@@ -599,9 +599,9 @@ h1 {
 }
 
 .segmented-btn.is-on {
-  background: #fff;
-  color: var(--ink);
-  box-shadow: var(--shadow);
+  background: var(--ink);
+  color: #fffaf3;
+  box-shadow: none;
 }
 
 .preset-row {
